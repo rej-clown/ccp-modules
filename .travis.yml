@@ -25,8 +25,8 @@ env:
 install:
     - wget --input-file=http://sourcemod.net/smdrop/$SMVERSION/sourcemod-latest-linux
     - tar -xzf $(cat sourcemod-latest-linux)
-    - git clone -b main https://github.com/nyood/ccprocessor.git $SOURCES_CORE
-    - git clone -b main https://github.com/nyood/sm-jansson.git $SOURCES_JANSSON
+    - git clone -b main https://github.com/rej-clown/ccprocessor.git $SOURCES_CORE
+    - git clone -b main https://github.com/rej-clown/sm-jansson.git $SOURCES_JANSSON
     - git clone -b main https://github.com/ErikMinekus/sm-ripext.git $SOURCES_RIP
     - git clone -b master https://github.com/FD-Forks/Shop-Core.git $SOURCES_SHOP
     - git clone -b master https://github.com/R1KO/VIP-Core.git $SOURCES_VIP
@@ -53,7 +53,7 @@ before_deploy:
 deploy:
   provider: releases
   token:
-    secure: nyRMPz3/XRRRie8HZBNJmyR/RoZe6GCHcw823TKqtBu5ft2hwPkw9oj7347EY28Dn5YCEHgDxxmaQ1SvtwPhqkWl93rZRTmW3fIufISTmRKyDoTahyquNEiCaN6QZdrBGpyYFIFe/TzCpc6JtLCKUTpjTdoWJS0aslWZgnx022eEJdQOoZINq5uill3XEEN1br55sDdufVA7SYVUsS7Pe24u7tr6cCZc7m3caL7y1cbGI1TMRONVUpA9GCrs+TDM260s3Lt97bWIUUmrC0R2WSwbD+cxlSo5IgRSB2rnOAe+Pm47ZHKr2msmAxce6BILRqBEt/tJr7cAgxZcYuPsHCQ2N2LoURcaqqA4da7syb0IqizDpAhuLVV7n4Rf3lGDQuJiAygz6hLVBWJxXXjaqTxcxdnDzW4Pdxm4/zZ1hr1cXihcwe5ZOSTpUserHx7qXh4nqAa0dg2we5f8oG00XJRccY3B8sQ18al0tWzAJr5904QvXWb4HbiCUKShHcWgH9lYbQniVF40Wjmfis12LUapm9CFxe6UMWOMFpr11vIP/CbdjYsi9+lp+K9GrMW0NuuLBzWGJOU0njQvI0te0oLygAr9Z9iLF5uEdufYPCkYqZeEBMU3eflhr5tUofseC2827vern5dIN5SW0fESYkyC+7wbLrr4wXqo5BnI8Pg=
+    secure: PAsLQmiZfhIt6TrKChaNACUKY2e7uLg5A3oZv3crOzfK+EifrFiIpQPdO4lXdfVp4dgQyivYi0e7579pW6eBOlZEioxJw30XNKWFUYKBXAgsDVZJDCdclQYeJM0+HdWQRe4XdePMQfkgaAHCCNflksOTg+PZnb+erhlD9QnWqUAHcy8oD9WLON7Qc3z+oDYBl0nkpjriUd6LbWrMk9UYlZGFu1XBouh/NeQNpLKjtx9HiEQM5T15ICP4QWtFgt2O1SFuXF3i2IP6QsuJmn+46Kl1Xomun0B8kCWSov0srrn16xODBZ6NOBjuiWQk6TLLy/9DdfKROZpieBEcXLBZnbKvIxpvjfxnjQKN6WIxvVgwtRowDQPpiNQQvqR1ZLbdgY4yiC6GCJTbJ9y42N70vW+A8zAE/O3Yk7Dt/QA4v/Tb38A3j9CkapqzIVrXSZbj8oXNavSQ41NvlEIvqYuaSHlPneyzxvOncStJsiX2x5KWwAk1clfKzCTLys1sU8rbjyU57+DFR/diFv3l6grjhPbuhAKdkyhvGMfhMeAfiYiWy5ecTX18Hi7rgAZzZUC2Es2kxqn96STEz3Z2ctMVz4f0ohvvuRX0fLa0at8LLiyimZQiQHJShyc12ttFGCVHQtBAeTdXy0K631HF/4BoIZxAin4USCnjGbH5zTOwP9g=
   file_glob: true
   file: $SOURCES/*
   skip_cleanup: true
